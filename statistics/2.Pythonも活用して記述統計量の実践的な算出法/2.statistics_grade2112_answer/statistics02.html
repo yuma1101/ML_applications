@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="ja" class="h-100">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <title></title>
+  <link rel="icon" href="../assets/icon/KQ_favicon.svg" type="image/svg+xml">
+  <!-- 共通スタイルシート -->
+  <link href="../assets/css/kq.css" rel="stylesheet">
+  <!-- accounts共通スタイルシート -->
+  <link href="../assets/css/base.css" rel="stylesheet">
+  <link href="../assets/css/practice.css" rel="stylesheet" />
+  <link href="../assets/css/limited_video.css" rel="stylesheet" />
+  <!-- Font Awesom -->
+  <script src="https://kit.fontawesome.com/172106a7bf.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="d-flex flex-column">
+  <!-- ヘッダーSTART -->
+  <header>
+    <nav id="header-nav" class="navbar navbar-expand-md fixed-top" style="width: 100%;">
+      <div class="container-fluid" style="height: 100%;padding: 0;">
+        <!-- LOGO -->
+        <a href="{% url 'main' %}" style="display: flex;height: 80%; align-items: center;" class="ps-md-3 ms-2">
+          <img src="../assets/img/kinoquest-logo.svg" style="object-fit: cover;height: 80%;display: block;"
+            alt="Kino-Quest">
+        </a>
+        <button id="navbar-toggler" class="navbar-toggler me-2" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarCollapse">
+          <ul id="nav-ul" class="navbar-nav align-items-center" style="display: none;">
+            <li id="nav-home" class="nav-item selected">
+              <!-- 現在のページにactiveをつける -->
+              <a class="nav-link" href="{% url 'main:home' %}">ホーム</a>
+            </li>
+            <li id="nav-course_list" class="nav-item">
+              <a class="nav-link" href="{% url 'main:courselist' %}">学習する</a>
+            </li>
+            <li id="nav-help" class="nav-item btn-tooltip">
+              <p class="nav-link nav-link_img">
+                <svg class="btn__icon btn__icon_question" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 21.9999C17.5228 21.9999 22 17.5228 22 11.9999C22 6.47709 17.5228 1.99994 12 1.99994C6.47715 1.99994 2 6.47709 2 11.9999C2 17.5228 6.47715 21.9999 12 21.9999Z"
+                    fill="#576C80" />
+                  <path
+                    d="M12 17.4999C12.5523 17.4999 13 17.0522 13 16.4999C13 15.9477 12.5523 15.4999 12 15.4999C11.4477 15.4999 11 15.9477 11 16.4999C11 17.0522 11.4477 17.4999 12 17.4999Z"
+                    fill="white" />
+                  <path
+                    d="M12 13.5004V12.7504C12.5192 12.7504 13.0267 12.5964 13.4584 12.308C13.8901 12.0196 14.2265 11.6096 14.4252 11.1299C14.6239 10.6503 14.6758 10.1225 14.5746 9.61327C14.4733 9.10407 14.2233 8.63634 13.8562 8.26923C13.489 7.90211 13.0213 7.65211 12.5121 7.55082C12.0029 7.44954 11.4751 7.50152 10.9955 7.7002C10.5158 7.89888 10.1058 8.23533 9.81739 8.66701C9.52895 9.09869 9.375 9.60621 9.375 10.1254"
+                    stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <svg class="btn__icon btn__icon--small btn__icon_arrow" width="24" height="24" viewBox="0 0 24 24"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.5 9L12 16.5L4.5 9" stroke="#576C80" stroke-width="1.6" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </p>
+              <span class="tooltip tooltip-on-bottom">
+                ヘルプ
+                <span class="triangle-wrapper">
+                  <span class="triangle"></span>
+                </span>
+              </span>
+              <div class="card text-start">
+                <ul class="bullet-list">
+                  <li class="bullet-list__item btn_trigger_bugreport">
+                    <a class="text_button" href="#bugreportModal" data-bs-toggle="modal" role="button">
+                      不具合の報告
+                    </a>
+                  </li>
+                  <li class="bullet-list__item btn_trigger_feedback">
+                    <a class="text_button" href="#feedbackModal" data-bs-toggle="modal" role="button">
+                      問題へのフィードバック
+                    </a>
+                  </li>
+                  <li class="bullet-list__item btn_trigger_shortcut d-none">
+                    <a class="text_button" href="#shortcutModal" data-bs-toggle="modal" role="button">
+                      jupyter Notebookショートカットキー
+                    </a>
+                  </li>
+                  <li class="bullet-list__item">
+                    <a class="text_button" href="{% url 'accounts:faq' %}">
+                      よくあるご質問（FAQ）
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li id="nav-info" class="nav-item btn-tooltip">
+              <a class="nav-link nav-link_img" href="{% url 'main:notice' %}">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M20.7231 16.4935C20.1653 15.536 19.5002 13.7189 19.5002 10.5V9.83478C19.5002 5.68305 16.1612 2.28058 12.057 2.25019C12.0378 2.25009 12.0188 2.25 11.9997 2.25C10.0106 2.25013 8.10311 3.04036 6.6967 4.44688C5.29029 5.85339 4.5002 7.76097 4.50022 9.75V10.5C4.50022 13.7185 3.8349 15.5357 3.2768 16.4931C3.14358 16.721 3.07287 16.98 3.07179 17.244C3.07071 17.5079 3.13932 17.7675 3.27067 17.9965C3.40202 18.2254 3.59147 18.4157 3.81988 18.548C4.04829 18.6803 4.30758 18.75 4.57154 18.75H19.4282C19.6921 18.75 19.9513 18.6803 20.1797 18.548C20.4081 18.4158 20.5976 18.2256 20.7289 17.9967C20.8603 17.7677 20.9289 17.5082 20.9279 17.2443C20.9269 16.9804 20.8562 16.7214 20.7231 16.4935H20.7231Z"
+                    fill="#576C80" />
+                  <path
+                    d="M14.9932 20.25H8.99316C8.79425 20.25 8.60349 20.329 8.46283 20.4697C8.32218 20.6103 8.24316 20.8011 8.24316 21C8.24316 21.1989 8.32218 21.3897 8.46283 21.5303C8.60349 21.671 8.79425 21.75 8.99316 21.75H14.9932C15.1921 21.75 15.3828 21.671 15.5235 21.5303C15.6641 21.3897 15.7432 21.1989 15.7432 21C15.7432 20.8011 15.6641 20.6103 15.5235 20.4697C15.3828 20.329 15.1921 20.25 14.9932 20.25Z"
+                    fill="#576C80" />
+                </svg>
+                {% if request.session.unread_count != 0 %}
+                <span class="notification-badge">{{ request.session.unread_count }}</span>
+                {% endif %}
+              </a>
+              <span class="tooltip tooltip-on-bottom">
+                お知らせ
+                <span class="triangle-wrapper">
+                  <span class="triangle"></span>
+                </span>
+              </span>
+            </li>
+            <li id="nav-mypage" class="nav-item btn-tooltip">
+              <a class="nav-link nav-link_img" href="{% url 'main:usersetting_profile' %}">
+                {% if user_icon %}
+                <img src="{{user_icon}}" alt="ユーザーアカウント">
+                {% else %}
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M21.7441 19.8738C20.3446 17.4634 18.1035 15.6556 15.4516 14.7979C16.722 14.042 17.7091 12.8899 18.2614 11.5186C18.8136 10.1473 18.9004 8.63263 18.5084 7.20724C18.1164 5.78184 17.2673 4.52454 16.0916 3.62846C14.9158 2.73238 13.4783 2.24707 12 2.24707C10.5217 2.24707 9.08428 2.73238 7.9085 3.62846C6.73273 4.52454 5.88364 5.78184 5.49165 7.20724C5.09965 8.63263 5.18644 10.1473 5.73868 11.5186C6.29091 12.8899 7.27805 14.042 8.54848 14.7979C5.89668 15.6556 3.65557 17.4633 2.25611 19.8736C2.19015 19.9876 2.15537 20.1169 2.15527 20.2487C2.15518 20.3804 2.18977 20.5098 2.25558 20.6239C2.32138 20.738 2.41607 20.8327 2.53012 20.8986C2.64417 20.9645 2.77356 20.9992 2.90527 20.9992L21.0949 20.9994C21.2266 20.9994 21.356 20.9647 21.4701 20.8988C21.5841 20.8329 21.6788 20.7382 21.7446 20.6241C21.8104 20.51 21.845 20.3806 21.8449 20.2488C21.8448 20.1171 21.81 19.9878 21.7441 19.8738L21.7441 19.8738Z"
+                    fill="#576C80" />
+                </svg>
+                {% endif %}
+                <!-- <span class="notification-badge">1</span> -->
+              </a>
+              <span class="tooltip tooltip-on-bottom">
+                マイページ
+                <span class="triangle-wrapper">
+                  <span class="triangle"></span>
+                </span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- ヘッダーEND -->
+
+  <main class="flex-shrink-0">
+    <div class="container">
+      <div class="row">
+        <h1 class="level1-heading"></h1>
+        <div class="bl_module_col">
+          <div class="bl_tabNavUnit">
+          </div>
+          <!-- /bl_tabNavUnit -->
+          <div class="bl_area">
+            <!-- ☆☆☆☆☆☆☆☆　実践課題の概要はここから修正する（実践課題作成者はここから修正する）　☆☆☆☆☆☆☆☆ -->
+            <div class="bl_area_content details is_active">
+              <div class="bl-area-content-inner">
+                <div class="block">
+                  <h3 class="level3-heading">取り組む内容</h3>
+                  <ul class="bullet-list">
+                    <li>記述統計量②</li>
+                  </ul>
+                </div>
+                <div class="block">
+                  <h3 class="level3-heading">学習のねらい</h3>
+                  <ul class="bullet-list">
+                    <li>記述統計量の意味と計算方法を理解しましょう。</li>
+                    <li>Pythonを使って記述統計量を算出してみましょう。</li>
+                  </ul>
+                </div>
+                <div class="block">
+                  <h3 class="level3-heading">講師からのコメント</h3>
+                  <p>第1回に続いて、第2回でも記述統計量の意味と計算方法について学びます。<br>
+                  第3回以降の確率分布や推定、検定などにも使うので、しっかり押さえておきましょう。
+                  </p>
+                </div>
+                <div class="block">
+                  <h3 class="level3-heading">提出するファイル</h3>
+                  <p class="submit-fileName">statistics02.zip</p>
+                </div>
+                <div class="block question-header">
+                  <h3 class="level3-heading">■ 問1　電卓を使って記述統計量の算出</h3>
+                </div>
+                <div class="block">
+                  <h3 class="level3-heading">この問題は紙、ペン、電卓のみを使って計算します。</h3>
+                  <blockquote class="card-brown">
+                    <p>
+                      6人の生徒のテストの点数は以下の表に示す通りでした。
+                      <table border="1", width="200", height="300">
+                        <tr align="center">
+                          <th>名前</th>
+                          <th>点数</th>
+                        </tr>
+                        <tr align="center">
+                          <td>Aさん</td>
+                          <td>45</td>
+                        </tr>
+                        <tr align="center">
+                          <td>Bさん</td>
+                          <td>40</td>
+                        </tr>
+                        <tr align="center">
+                          <td>Cさん</td>
+                          <td>55</td>
+                        </tr>
+                        <tr align="center">
+                          <td>Dさん</td>
+                          <td>60</td>
+                        </tr>
+                        <tr align="center">
+                          <td>Eさん</td>
+                          <td>65</td>
+                        </tr>
+                        <tr align="center">
+                          <td>Fさん</td>
+                          <td>35</td>
+                      </table>
+                    </p>
+                  </blockquote>
+                  <ol>
+                    <li>
+                      平均値を算出しましょう。
+                    </li>
+                    <li>
+                      6人の偏差の和を算出しましょう。
+                    </li>
+                    <li>
+                      平方和を算出しましょう。
+                    </li>
+                    <li>
+                      分散を算出しましょう。
+                    </li>
+                    <li>
+                      標準偏差を算出しましょう。
+                    </li>
+                </div>
+                <div class="block question-header">
+                  <h3 class="level3-heading">■ 問2　Pythonを使って記述統計量の算出</h3>
+                </div>
+                <div class="block">
+                  <h3 class="level3-heading">この問題はPythonを使って計算します。</h3>
+                  <blockquote class="card-brown">
+                    <p>
+                      問1と同じ表を使います。
+                    </p>
+                  </blockquote>
+                  <div class="block">
+                    <ol>
+                      <li>
+                        平均値を算出しましょう。
+                      </li>
+                      <li>
+                        6人の偏差の和を算出しましょう。
+                      </li>
+                      <li>
+                        平方和を算出しましょう。
+                      </li>
+                      <li>
+                        分散を算出しましょう。
+                      </li>
+                      <li>
+                        標準偏差を算出しましょう。
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="block question-header">
+                  <h3 class="level3-heading">■ 問3　変動係数の算出</h3>
+                </div>
+                <div class="block">
+                  <h3 class="level3-heading">この問題は紙、ペン、電卓のみを使って計算します。</h3>
+                  <blockquote class="card-brown">
+                    <p>
+                      <table border="1", width="200", height="150">
+                        <tr align="center">
+                          <th></th>
+                          <th>平均点</th>
+                          <th>標準偏差</th>
+                        </tr>
+                        <tr align="center">
+                          <td>A組</td>
+                          <td>40</td>
+                          <td>10</td>
+                        </tr>
+                        <tr align="center">
+                          <td>B組</td>
+                          <td>90</td>
+                          <td>20</td>
+                        </tr>
+                      </table>
+                    </p>
+                  </blockquote>
+                  <div class="block">
+                    <ol>
+                      <li>
+                        変動係数を算出し、A組とB組どちらのバラつきが大きいか確認しましょう。
+                      </li>
+                    </ol>
+                  </div>
+                <div class="block question-header">
+                  <h3 class="level3-heading">■ 問4　Pythonを使って変動係数の算出</h3>
+                </div>
+                <div class="block">
+                  <h3 class="level3-heading">この問題はPythonを使って計算します。</h3>
+                  <blockquote class="card-brown">
+                    <p>
+                      問3と同じ表を使います。
+                    </p>
+                  </blockquote>
+                  <ol>
+                    <li>
+                      変動係数を算出し、A組とB組どちらのバラつきが大きいか確認しましょう。
+                    </li>
+                  </ol>
+                </div>
+                <h3 class="level3-heading">■ 問5　尖度と歪度</h3>
+              </div>
+              <div class="block">
+                <blockquote class="card-brown">
+                  <p>1.
+                    <figure class="list-item-img-wrapper">
+                        <img class="list-item-img"
+                          src="{% static 'assets/practice/statistics/02/01.png' %}" alt="" loading="lazy">
+                    </figure>
+                  <p>2.
+                    <figure class="list-item-img-wrapper">
+                        <img class="list-item-img"
+                            src="{% static 'assets/practice/statistics/02/01.png' %}" alt="" loading="lazy">
+                    </figure>
+                  </p>
+                  <p>3.
+                    <figure class="list-item-img-wrapper">
+                        <img class="list-item-img"
+                          src="{% static 'assets/practice/statistics/02/01.png' %}" alt="" loading="lazy">
+                    </figure>
+                  <p>4.
+                    <figure class="list-item-img-wrapper">
+                        <img class="list-item-img"
+                            src="{% static 'assets/practice/statistics/02/01.png' %}" alt="" loading="lazy">
+                    </figure>
+                  </p>
+                  <p>5.
+                    <figure class="list-item-img-wrapper">
+                        <img class="list-item-img"
+                          src="{% static 'assets/practice/statistics/02/01.png' %}" alt="" loading="lazy">
+                    </figure>
+                </blockquote>
+                <div class="block">
+                  <ol>
+                    <li>
+                      上の5つのグラフの中から、尖度が最も大きいグラフを選んでください。
+                    </li>
+                    <li>
+                      上の5つのグラフの中から、歪度が最も大きいグラフを選んでください。
+                    </li>
+                  </ol>
+                </div>
+              </div>
+                <div class="block">
+                  <h3 class="level3-heading">ファイルの提出</h3>
+                  <p id="submission_file">ここまでのファイルをzipファイルに圧縮し、statistics02.zipとして提出しましょう。 </p>
+                </div>
+              </div>
+            </div>
+            <!-- /bl_area_content details -->
+
+            <!-- 使用するデータセットここから -->
+            <div class="bl_area_content data-files">
+              <div class="bl-area-content-inner">
+                <div class="block">
+                  <h3 class="level3-heading">使用するデータセットのダウンロード</h3>
+                  <ul class="downloadFile-list">
+                    <li class="downloadFile-list-item">
+                      <a class="text_button" href="{% static 'assets/practice/finance03/dataset.zip' %}"
+                        download="dataset.zip">
+                        <svg class="btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_12836_43120)">
+                            <path
+                              d="M20.0344 7.71564L14.7844 2.46564C14.6415 2.32635 14.4495 2.24889 14.25 2.25001H5.25C4.85218 2.25001 4.47064 2.40805 4.18934 2.68935C3.90804 2.97066 3.75 3.35219 3.75 3.75001V20.25C3.75 20.6478 3.90804 21.0294 4.18934 21.3107C4.47064 21.592 4.85218 21.75 5.25 21.75H18.75C19.1478 21.75 19.5294 21.592 19.8107 21.3107C20.092 21.0294 20.25 20.6478 20.25 20.25V8.25001C20.2511 8.05048 20.1737 7.85851 20.0344 7.71564ZM15.1594 15.1594L12.5344 17.7844C12.391 17.923 12.1994 18.0005 12 18.0005C11.8006 18.0005 11.609 17.923 11.4656 17.7844L8.84063 15.1594C8.72103 15.0137 8.65991 14.8287 8.66916 14.6404C8.6784 14.4521 8.75736 14.274 8.89066 14.1407C9.02396 14.0074 9.20208 13.9284 9.39037 13.9192C9.57866 13.9099 9.76365 13.971 9.90937 14.0906L11.25 15.4406V11.25C11.25 11.0511 11.329 10.8603 11.4697 10.7197C11.6103 10.579 11.8011 10.5 12 10.5C12.1989 10.5 12.3897 10.579 12.5303 10.7197C12.671 10.8603 12.75 11.0511 12.75 11.25V15.4406L14.0906 14.0906C14.2363 13.971 14.4213 13.9099 14.6096 13.9192C14.7979 13.9284 14.976 14.0074 15.1093 14.1407C15.2426 14.274 15.3216 14.4521 15.3308 14.6404C15.3401 14.8287 15.279 15.0137 15.1594 15.1594ZM14.25 8.25001V4.12501L18.375 8.25001H14.25Z"
+                              fill="#ED6D34" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_12836_43120">
+                              <rect width="24" height="24" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg><span>dataset.zip</span>
+                      </a>
+                      <span>(45KB)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- /bl_area_content data-files -->
+            <!-- ☆☆☆☆☆☆☆☆　実践課題の概要はここまで修正する（実践課題作成者はここまで修正する）　☆☆☆☆☆☆☆☆ -->
+
+            <!-- 関連動画ここから -->
+            <div class="bl_area_content similar-problems">
+              {% include "main/practice/includes/similar_problems.html" %}
+            </div>
+            <!-- /bl_area_content similar-problems -->
+
+            <!-- 解説動画ここから -->
+            <div class="bl_area_content editorial">
+              {% include "main/practice/includes/editorial.html" %}
+            </div>
+            <!-- /bl_area_content data-files editorial -->
+          </div>
+          <!-- /bl_area -->
+        </div>
+        <!-- /bl_module_col -->
+        <div class="content-bottom">
+          <a class="text_button" href="{% url 'main:assignmentlist' practice_id %}">
+            <svg class="btn__icon btn__icon--small" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_12721_43306)">
+                <path
+                  d="M21.7498 13.5C21.7473 15.0906 21.1144 16.6152 19.9897 17.7399C18.865 18.8646 17.3404 19.4975 15.7498 19.5H7.49982C7.30091 19.5 7.11015 19.421 6.96949 19.2804C6.82884 19.1397 6.74982 18.9489 6.74982 18.75C6.74982 18.5511 6.82884 18.3603 6.96949 18.2197C7.11015 18.079 7.30091 18 7.49982 18H15.7498C16.9433 18 18.0879 17.5259 18.9318 16.682C19.7757 15.8381 20.2498 14.6935 20.2498 13.5C20.2498 12.3066 19.7757 11.162 18.9318 10.318C18.0879 9.47413 16.9433 9.00002 15.7498 9.00002H8.24982V12.75C8.25029 12.8981 8.20691 13.043 8.12516 13.1664C8.04341 13.2899 7.92695 13.3864 7.79045 13.4438C7.69794 13.4805 7.59936 13.4996 7.49982 13.5C7.30067 13.4992 7.10942 13.422 6.96545 13.2844L2.46545 8.7844C2.32461 8.6422 2.24561 8.45016 2.24561 8.25002C2.24561 8.04989 2.32461 7.85785 2.46545 7.71565L6.96545 3.21565C7.07389 3.11391 7.20892 3.04494 7.35492 3.01674C7.50092 2.98853 7.65192 3.00224 7.79045 3.05627C7.92695 3.11365 8.04341 3.21015 8.12516 3.33361C8.20691 3.45706 8.25029 3.60196 8.24982 3.75002V7.50002H15.7498C17.3404 7.5025 18.865 8.13544 19.9897 9.26012C21.1144 10.3848 21.7473 11.9095 21.7498 13.5Z"
+                  fill="#ED6D34" />
+              </g>
+              <defs>
+                <clipPath id="clip0_12721_43306">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg><span>問題一覧に戻る</span>
+          </a>
+        </div>
+
+        <!-- Video Modal -->
+        {% include "main/practice/includes/video_modal.html" %}
+
+        <!-- Alert Modal -->
+        {% include "main/practice/includes/alert_modal.html" %}
+
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </main>
+  {% endblock %}
+
+  {% block extra_footer %}
+  {% endblock %}
+
+  {% block footer_includes %}
+  {% endblock %}
+
+  {% block script %}
+  {% include "main/practice/includes/scripts.html" %}
+  {% endblock %}
