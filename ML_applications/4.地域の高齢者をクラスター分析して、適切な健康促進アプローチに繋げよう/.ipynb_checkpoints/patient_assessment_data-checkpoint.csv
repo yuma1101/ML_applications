@@ -1,0 +1,118 @@
+index,frail,gender,age,hospitalization_one_year,ortho_hypotension,vision,audition,balance_single,gait_speed_4m,bmi_score,mmse_total_score,depression_total_score
+0,Pre-frail,M,78,0,No,Sees moderately,Hears moderately,>5 sec,8.8,24.09550046,29,2
+1,Pre-frail,M,79,0,No,Sees moderately,Hears moderately,>5 sec,6.2,24.2056933,30,2
+2,Pre-frail,M,79,0,No,Sees moderately,Hears moderately,>5 sec,7.2,24.57614515,28,2
+3,Pre-frail,M,80,0,No,Sees moderately,Hears moderately,>5 sec,6.45,24.8364069,26,3
+4,Non frail,F,72,1,No,Sees well,Hears well,>5 sec,4.7,23.4375,25,2
+5,Non frail,F,73,1,No,Sees well,Hears well,>5 sec,5.2,23.3203125,27,3
+6,Pre-frail,F,73,1,No,Sees moderately,Hears well,>5 sec,5.1,22.9296875,28,3
+7,Non frail,F,74,1,No,Sees moderately,Hears well,>5 sec,5.2,23.515625,25,3
+8,Non frail,M,76,0,No,Sees well,Hears moderately,>5 sec,4.0,24.42447125,30,2
+9,Non frail,M,77,0,No,Sees well,Hears moderately,>5 sec,4.07,24.50648999,29,3
+10,Non frail,M,77,0,No,Sees well,Hears well,>5 sec,5.1,24.02352234,29,2
+11,Non frail,M,78,0,No,Sees well,Hears well,>5 sec,4.9,24.22399679,28,3
+12,Frail,F,81,0,No,Sees moderately,Hears well,test non realizable,8.1,44.0625,26,4
+13,Frail,F,82,0,No,Sees moderately,Hears well,test non realizable,8.41,44.4140625,25,8
+14,Frail,F,82,0,No,Sees moderately,Hears moderately,test non realizable,8.6,44.375,26,7
+15,Frail,F,83,0,No,Sees moderately,Hears moderately,test non realizable,9.2,44.65804359,24,8
+16,Pre-frail,F,71,0,No,Sees well,Hears well,>5 sec,7.1,28.94448503,28,4
+17,Pre-frail,F,72,0,No,Sees well,Hears well,>5 sec,6.02,28.57925493,28,4
+18,Pre-frail,F,72,0,No,Sees moderately,Hears well,>5 sec,6.3,29.17275383,28,4
+19,Pre-frail,F,73,0,No,Sees moderately,Hears moderately,>5 sec,6.3,29.24707298,29,3
+20,Pre-frail,F,73,0,No,Sees moderately,Hears well,test non realizable,11.9,27.890625,25,4
+21,Pre-frail,F,74,0,No,Sees moderately,Hears moderately,<5 sec,8.41,28.046875,25,4
+22,Pre-frail,F,74,0,No,Sees moderately,Hears well,<5 sec,10.1,27.65625,25,4
+23,Pre-frail,F,75,0,No,Sees moderately,Hears well,<5 sec,9.6,27.890625,26,6
+24,Non frail,M,70,1,No,Sees well,Hears well,>5 sec,4.3,27.51147842,30,4
+25,Non frail,M,71,1,No,Sees well,Hears well,>5 sec,4.46,27.62492564,30,4
+26,Non frail,M,71,1,No,Sees well,Hears well,>5 sec,4.42,27.43801653,30,4
+27,Non frail,M,72,1,No,Sees well,Hears well,>5 sec,4.48,27.69928614,29,4
+28,Non frail,M,74,0,Yes,Sees well,Hears well,>5 sec,4.6,26.82517909,29,2
+29,Non frail,M,75,0,No,Sees well,Hears well,>5 sec,4.62,27.16811462,30,3
+30,Non frail,M,75,0,No,Sees well,Hears well,>5 sec,4.7,26.6727633,29,2
+31,Non frail,M,76,0,No,Sees well,Hears well,>5 sec,4.6,26.97759488,29,3
+32,Non frail,F,70,0,No,Sees moderately,Hears well,<5 sec,5.8,24.8074922,30,3
+33,Non frail,F,71,0,No,Sees moderately,Hears well,>5 sec,5.17,24.8074922,30,3
+34,Non frail,F,71,0,No,Sees moderately,Hears well,>5 sec,5.4,24.59937565,30,2
+35,Non frail,F,72,0,No,Sees well,Hears well,>5 sec,5.21,24.72424558,30,2
+36,Pre-frail,M,75,0,No,Sees moderately,Hears well,>5 sec,6.2,24.64099896,29,1
+37,Pre-frail,M,76,0,No,Sees well,Hears well,>5 sec,6.2,25.70062717,27,1
+38,Non frail,M,76,0,No,Sees moderately,Hears well,>5 sec,6.14,24.62472592,28,1
+39,Pre-frail,M,77,0,No,Sees moderately,Hears well,>5 sec,6.15,25.16126276,28,2
+40,Non frail,M,76,0,No,Sees well,Hears well,>5 sec,6.5,29.6,29,1
+41,Pre-frail,M,77,0,No,Sees moderately,Hears well,>5 sec,6.1,29.42222222,29,1
+42,Pre-frail,M,77,0,No,Sees well,Hears well,>5 sec,6.2,29.73333333,29,2
+43,Pre-frail,M,78,0,No,Sees well,Hears well,>5 sec,6.34,29.46666667,29,3
+44,Non frail,M,77,1,No,Sees well,Hears well,>5 sec,5.4,25.18621386,28,0
+45,Non frail,M,78,1,No,Sees well,Hears well,>5 sec,5.1,24.74435046,28,0
+46,Non frail,M,78,0,No,Sees well,Hears well,>5 sec,5.1,25.34402222,28,1
+47,Non frail,M,79,0,No,Sees well,Hears well,>5 sec,5.1,25.18621386,30,1
+48,Pre-frail,F,76,0,No,Sees poorly,Hears well,>5 sec,7.74,26.93028096,25,4
+49,Pre-frail,F,77,0,Yes,Sees poorly,Hears well,>5 sec,7.3,26.6805411,26,5
+50,Frail,F,77,0,No,Sees poorly,Hears well,>5 sec,6.49,28.16663856,25,4
+51,Frail,F,78,0,No,Sees poorly,Hears well,<5 sec,7.36,29.47377298,26,4
+52,Pre-frail,M,75,0,No,Sees poorly,Hears well,<5 sec,8.2,29.63265913,28,4
+53,Pre-frail,M,76,0,No,Sees poorly,Hears well,<5 sec,7.3,29.28224623,28,5
+54,Pre-frail,M,76,0,No,Sees poorly,Hears well,<5 sec,7.16,29.59547888,26,5
+55,Frail,M,77,0,No,Sees poorly,Hears well,<5 sec,7.42,29.43279762,25,7
+56,Frail,F,79,0,No,Sees moderately,Hears well,test non realizable,22.8,38.73577952,28,2
+57,Frail,F,80,0,No,Sees moderately,Hears well,test non realizable,13.8,39.55535722,29,5
+58,Frail,F,80,0,No,Sees moderately,Hears moderately,test non realizable,20.4,38.93606794,26,3
+59,Frail,F,81,0,No,Sees moderately,Hears moderately,test non realizable,15.6,38.77583721,27,4
+60,Frail,M,76,0,No,Sees well,Hears well,test non realizable,7.0,23.10843458,29,1
+61,Frail,M,77,0,No,Sees well,Hears well,<5 sec,5.0,24.15881797,28,0
+62,Non frail,M,77,0,No,Sees well,Hears well,<5 sec,4.0,24.12380519,27,0
+63,Non frail,M,78,0,No,Sees well,Hears well,>5 sec,4.46,24.19383075,29,3
+64,Pre-frail,M,77,0,No,Sees well,Hears well,>5 sec,5.0,32.14631254,29,0
+65,Pre-frail,M,78,0,No,Sees well,Hears well,<5 sec,4.3,30.58581193,29,0
+66,Pre-frail,M,78,1,No,Sees well,Hears well,>5 sec,3.91,31.52211229,29,0
+67,Frail,M,79,0,No,Sees well,Hears well,>5 sec,7.3,29.3523545,29,1
+68,Pre-frail,F,73,0,No,Sees well,Hears well,>5 sec,5.0,27.12031558,26,0
+69,Pre-frail,F,74,0,No,Sees well,Hears well,<5 sec,4.3,27.32577252,28,0
+70,Pre-frail,F,74,0,No,Sees well,Hears well,<5 sec,5.7,27.40795529,27,4
+71,Pre-frail,F,75,0,No,Sees well,Hears well,>5 sec,4.79,26.9787821,27,3
+72,Frail,M,71,0,No,Sees well,Hears moderately,>5 sec,7.0,34.01891327,27,0
+73,Pre-frail,M,72,0,No,Sees well,Hears moderately,<5 sec,6.0,33.70681315,28,0
+74,Non frail,M,72,0,No,Sees well,Hears moderately,<5 sec,3.0,33.55076308,29,0
+75,Non frail,M,73,0,No,Sees well,Hears moderately,<5 sec,3.2,31.58453232,29,3
+76,Non frail,M,76,0,No,Sees well,Hears well,>5 sec,8.0,22.86236854,28,4
+77,Non frail,M,77,0,No,Sees well,Hears well,<5 sec,4.3,23.24340802,27,0
+78,Pre-frail,M,77,0,No,Sees well,Hears well,<5 sec,4.1,23.24340802,27,1
+79,Pre-frail,M,78,0,Yes,Sees well,Hears well,>5 sec,5.0,22.82426459,27,3
+80,Non frail,M,79,0,No,Sees well,Hears well,>5 sec,10.0,37.18024985,28,0
+81,Non frail,M,80,0,No,Sees well,Hears well,<5 sec,3.25,37.18024985,28,0
+82,Non frail,M,80,0,No,Sees well,Hears well,>5 sec,4.1,37.55205235,29,3
+83,Pre-frail,M,81,0,No,Sees well,Hears well,>5 sec,4.57,37.09825528,29,3
+84,Frail,M,80,0,No,Sees well,Hears well,test non realizable,13.0,25.0,27,0
+85,Frail,M,81,1,No,Sees well,Hears well,<5 sec,8.2,25.390625,29,0
+86,Pre-frail,M,82,1,No,Sees well,Hears well,<5 sec,5.9,25.6640625,29,0
+87,Pre-frail,M,82,1,No,Sees well,Hears well,>5 sec,5.52,26.15766704,28,1
+88,Frail,F,74,0,No,Sees well,Hears well,>5 sec,6.0,29.92715921,27,2
+89,Pre-frail,F,75,0,No,Sees well,Hears well,<5 sec,5.3,29.92715921,30,0
+90,Pre-frail,F,75,0,No,Sees well,Hears well,>5 sec,7.0,29.55254943,29,2
+91,Pre-frail,M,75,0,No,Sees well,Hears moderately,>5 sec,6.0,27.04164413,25,0
+92,Pre-frail,M,76,0,No,Sees well,Hears moderately,<5 sec,4.1,26.70362358,29,0
+93,Non frail,M,76,0,No,Sees well,Hears moderately,<5 sec,3.1,26.43320714,29,1
+94,Non frail,M,77,0,No,Sees well,Hears well,>5 sec,3.24,25.76096762,30,0
+95,Pre-frail,M,82,0,No,Sees well,Hears well,>5 sec,10.0,26.44628099,29,3
+96,Pre-frail,M,83,1,No,Sees well,Hears well,>5 sec,9.0,26.07897153,29,0
+97,Pre-frail,M,83,1,No,Sees well,Hears well,>5 sec,5.54,29.0174472,30,0
+98,Pre-frail,M,84,0,No,Sees well,Hears well,>5 sec,4.75,29.78879706,29,1
+99,Frail,M,79,1,No,Sees moderately,Hears moderately,>5 sec,4.09,24.44727891,28,4
+100,Frail,M,79,1,No,Sees moderately,Hears moderately,<5 sec,4.0,24.44727891,29,0
+101,Non frail,M,80,1,Yes,Sees moderately,Hears moderately,<5 sec,2.54,24.76615646,29,0
+102,Non frail,F,83,0,No,Sees well,Hears well,<5 sec,6.0,23.87511478,30,1
+103,Non frail,F,84,0,No,Sees well,Hears well,<5 sec,5.0,23.69146006,29,0
+104,Non frail,F,84,0,No,Sees moderately,Hears moderately,<5 sec,3.35,22.47933884,30,3
+105,Non frail,F,85,0,No,Sees well,Hears moderately,<5 sec,3.9,22.77318641,29,0
+106,Frail,F,75,3,No,Sees well,Hears well,<5 sec,5.0,26.34649403,27,0
+107,Frail,F,76,3,No,Sees well,Hears well,<5 sec,5.6,26.34649403,27,0
+108,Frail,F,76,3,No,Sees well,Hears well,>5 sec,6.5,27.66381874,28,0
+109,Frail,F,72,0,No,Sees well,Hears well,<5 sec,3.0,35.430839,29,6
+110,Pre-frail,F,73,0,Yes,Sees well,Hears well,<5 sec,4.0,35.430839,28,0
+111,Pre-frail,F,74,0,No,Sees well,Hears well,<5 sec,4.0,35.430839,30,6
+112,Pre-frail,F,75,0,No,Sees well,Hears well,<5 sec,3.8,35.430839,30,6
+113,Frail,F,78,0,No,Sees well,Hears moderately,>5 sec,18.0,34.48415757,28,1
+114,Frail,F,78,0,No,Sees well,Hears moderately,<5 sec,15.0,35.29554952,28,0
+115,Frail,F,78,0,No,Sees well,Hears moderately,<5 sec,18.0,35.29554952,28,1
+116,Frail,F,79,0,No,Sees well,Hears moderately,<5 sec,16.0,35.29554952,29,5
